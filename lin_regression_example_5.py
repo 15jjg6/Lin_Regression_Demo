@@ -28,29 +28,26 @@ lineX = np.linspace(Xn.min(), Xn.max(), 100)
 liney = [theta[0] + theta[1]*xx for xx in lineX]
 
 
-print(cost_function(Xn, yn, theta))
-
 alpha = 0.1
 mul = 10
 bat = 8
 ch, th = GradDescent(Xn, yn, theta, alpha, mul, bat, log=False)
 
-print(ch)
-print(th)
 
 lineX = np.linspace(Xn.min(), Xn.max(), 100)
 liney = [th[-1,0] + th[-1,1]*xx for xx in lineX]
 
+# Gradient Descent Result (final hypothesis)
 plt.plot(Xn,yn,'r.', label='Training data')
 plt.plot(lineX,liney,'b--', label='Current hypothesis')
 plt.legend()
 plt.show()
 
-
+# Cost fun'n output after each iteration
 plt.plot(ch,'g--')
 plt.show()
 
-
+# Theta values after each iteration
 plt.plot(th[:,0],'r-.')
 plt.plot(th[:,1],'b-.')
 plt.show()
