@@ -1,3 +1,5 @@
+import numpy as np
+
 class LinearModel():
 
     def __init__(self, features, target):
