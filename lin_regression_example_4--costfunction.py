@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt #python library for plot and graphs
 
 from LinearModel import *
+plt.style.use('fivethirtyeight')
 
 
 data = pd.read_csv('housing_data', header=None)
