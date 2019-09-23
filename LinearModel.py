@@ -29,7 +29,8 @@ def normscaler(Z, normal=False, scale='max'):
         norm = 0
         sclr = 1
         if normal:
-            nrm = mean
+            norm = mean
+            print("dddd")
         if scale == 'max':
             sclr = max
         elif scale == 'std':
