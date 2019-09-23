@@ -35,26 +35,9 @@ mul = 10
 bat = 8
 ch, th = GradDescent(Xn, yn, theta, alpha, mul, bat, log=False)
 
-print(ch)
-print(th)
 
 lineX = np.linspace(Xn.min(), Xn.max(), 100)
 liney = [th[-1,0] + th[-1,1]*xx for xx in lineX]
-
-plt.plot(Xn,yn,'r.', label='Training data')
-plt.plot(lineX,liney,'b--', label='Current hypothesis')
-plt.legend()
-plt.show()
-
-
-plt.plot(ch,'g--')
-plt.show()
-
-
-plt.plot(th[:,0],'r-.')
-plt.plot(th[:,1],'b-.')
-plt.show()
-
 
 #Grid over which we will calculate J
 theta0_vals = np.linspace(-2, 2, 100)

@@ -37,12 +37,6 @@ ch, th = GradDescent(Xn, yn, theta, alpha, mul, bat, log=False)
 lineX = np.linspace(Xn.min(), Xn.max(), 100)
 liney = [th[-1,0] + th[-1,1]*xx for xx in lineX]
 
-# Gradient Descent Result (final hypothesis)
-plt.plot(Xn,yn,'r.', label='Training data')
-plt.plot(lineX,liney,'b--', label='Current hypothesis')
-plt.legend()
-plt.show()
-
 # Cost fun'n output after each iteration
 plt.plot(ch,'g--')
 plt.show()
