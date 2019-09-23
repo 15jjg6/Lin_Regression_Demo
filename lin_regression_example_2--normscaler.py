@@ -1,13 +1,15 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt #python library for plot and graphs
+import matplotlib.pyplot as plt
 from LinearModel import normscaler
 plt.style.use('fivethirtyeight')
 
 
+# Read CSV files for housing data and drop columns with unnecessary info
 data = pd.read_csv('housing_data', header=None)
 data.columns =(['Size','Bedroom','Price'])
 data.drop('Bedroom', axis=1, inplace=True)
+
 
 X = np.array(data.drop('Price',axis=1))
 y = np.array(data.Price)
