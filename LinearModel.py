@@ -30,7 +30,6 @@ def normscaler(Z, normal=False, scale='max'):
         sclr = 1
         if normal:
             norm = mean
-            print("dddd")
         if scale == 'max':
             sclr = max
         elif scale == 'std':
