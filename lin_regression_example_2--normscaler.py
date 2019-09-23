@@ -10,7 +10,7 @@ data = pd.read_csv('housing_data', header=None)
 data.columns =(['Size','Bedroom','Price'])
 data.drop('Bedroom', axis=1, inplace=True)
 
-
+# Turn pandas columns into numpy arrays
 X = np.array(data.drop('Price',axis=1))
 y = np.array(data.Price)
 m = len(data)
@@ -19,7 +19,7 @@ print(X.shape)
 print(y.shape)
 print(m)
 
-
+# Reshape y column from flattened array to n by 1 matrix
 y = y.reshape((m,1))
 print(y.shape)
 

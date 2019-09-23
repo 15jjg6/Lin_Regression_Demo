@@ -22,19 +22,19 @@ class LinearModel():
 def normscaler(Z, normal=False, scale='max'):
     Zn = np.zeros(Z.shape)
     for col in range(Zn.shape[1]):
-        std = Z[:, col].std()
+        standard_dev = Z[:, col].std()
         clm = Z[:, col]
-        mn = Z[:, col].mean()
-        mx = Z[:, col].max()
-        nrm = 0
+        mean = Z[:, col].mean()
+        max = Z[:, col].max()
+        norm = 0
         sclr = 1
         if normal:
-            nrm = mn
+            nrm = mean
         if scale == 'max':
-            sclr = mx
+            sclr = max
         elif scale == 'std':
-            sclr = std
-        Zn[:, col] = (clm - nrm) / sclr
+            sclr = standard_dev
+        Zn[:, col] = (clm - norm) / sclr
 
     return Zn
 
