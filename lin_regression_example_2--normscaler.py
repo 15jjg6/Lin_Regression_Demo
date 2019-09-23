@@ -23,11 +23,9 @@ print(m)
 y = y.reshape((m,1))
 print(y.shape)
 
-
+# Normalize data (center around zero) and scale by standard deviation
 Xn = normscaler(X, normal=True, scale='std')
 yn = normscaler(y, normal=True, scale='std')
 
 plt.plot(Xn, yn, 'r.')
 plt.show()
-
-

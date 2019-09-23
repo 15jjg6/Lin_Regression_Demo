@@ -17,16 +17,12 @@ y = np.array(data.Price)
 m = len(data)
 y = y.reshape((m,1))
 
-
+# Normalize and scale
 Xn = normscaler(X, normal=True, scale='std')
 yn = normscaler(y, normal=True, scale='std')
 
-
+# Initial theta val guess
 theta = np.array([0.9,-1])
-
-
-lineX = np.linspace(Xn.min(), Xn.max(), 100)
-liney = [theta[0] + theta[1]*xx for xx in lineX]
 
 
 print(cost_function(Xn, yn, theta))
