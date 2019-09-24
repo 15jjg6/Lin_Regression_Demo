@@ -75,6 +75,8 @@ def GradDescent(features, target, param, learnRate=0.01, multiple=1, batch=8, lo
         theta_history[ix] = t
 
         g, l = cost_function(features[i:i + b], y[i:i + b], t, deriv=True)
+        print(g)
+        print(l)
         t = t - a * g
 
         if log:
