@@ -24,9 +24,6 @@ yn = normscaler(y, normal=True, scale='std')
 # Initial theta val guess
 theta = np.array([0.9,-1])
 
-
-print(cost_function(Xn, yn, theta))
-
 alpha = 0.1
 mul = 10
 bat = 8
